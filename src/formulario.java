@@ -1,3 +1,10 @@
+
+import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -25,251 +32,53 @@ public class formulario extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jDialog1 = new javax.swing.JDialog();
-        jPanel1 = new javax.swing.JPanel();
+        jFrame1 = new javax.swing.JFrame();
+        jPanel9 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jFrame2 = new javax.swing.JFrame();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jFrame1 = new javax.swing.JFrame();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        nombre1 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        Email1 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jCalendar2 = new com.toedter.calendar.JCalendar();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        fecha1 = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
+        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        Email = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel19 = new javax.swing.JLabel();
-
-        jDialog1.setBackground(new java.awt.Color(240, 86, 51));
-        jDialog1.getContentPane().setLayout(new java.awt.GridLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel8.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
-        jLabel8.setText("Debe rellenar los campos indicados con *");
-
-        jLabel9.setFont(new java.awt.Font("Ravie", 1, 18)); // NOI18N
-        jLabel9.setText("y marcar la casilla para poder participar");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(7, 7, 7))
-                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addContainerGap(11, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 221, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(jLabel9)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        jDialog1.getContentPane().add(jPanel1);
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         jFrame1.setTitle("Formulario");
         jFrame1.setBackground(new java.awt.Color(0, 143, 57));
         jFrame1.getContentPane().setLayout(new java.awt.GridLayout(3, 1));
 
-        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel6.setLayout(new java.awt.BorderLayout());
-
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo-green-day-624x128.jpg"))); // NOI18N
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setMaximumSize(new java.awt.Dimension(200, 66));
-        jLabel11.setMinimumSize(new java.awt.Dimension(200, 66));
-        jPanel6.add(jLabel11, java.awt.BorderLayout.PAGE_START);
-
-        jFrame1.getContentPane().add(jPanel6);
-
-        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel7.setForeground(new java.awt.Color(0, 143, 57));
-        jPanel7.setLayout(new java.awt.GridBagLayout());
-
-        jLabel12.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel12.setText("Nombre: *");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 4;
-        gridBagConstraints.ipadx = 13;
-        gridBagConstraints.ipady = 14;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        jPanel7.add(jLabel12, gridBagConstraints);
-
-        jTextField4.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.ipadx = 169;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 4, 0, 0);
-        jPanel7.add(jTextField4, gridBagConstraints);
-
-        jLabel13.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel13.setText("Apellidos:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 14;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 10, 0, 0);
-        jPanel7.add(jLabel13, gridBagConstraints);
-
-        jTextField5.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.ipadx = 227;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(7, 4, 0, 0);
-        jPanel7.add(jTextField5, gridBagConstraints);
-
-        jLabel14.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel14.setText("Fecha de nacimiento: *");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 18;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 24, 0, 0);
-        jPanel7.add(jLabel14, gridBagConstraints);
-
-        jLabel15.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel15.setText("Email: *");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 39;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(2, 24, 0, 0);
-        jPanel7.add(jLabel15, gridBagConstraints);
-
-        jLabel16.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel16.setText("Frase: ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 10, 0, 0);
-        jPanel7.add(jLabel16, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 10;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 237;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 35, 0, 10);
-        jPanel7.add(jTextField6, gridBagConstraints);
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 203;
-        gridBagConstraints.ipady = 60;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(18, 4, 0, 0);
-        jPanel7.add(jScrollPane2, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridheight = 6;
-        gridBagConstraints.ipadx = -12;
-        gridBagConstraints.ipady = -28;
-        gridBagConstraints.insets = new java.awt.Insets(2, 18, 0, 0);
-        jPanel7.add(jCalendar2, gridBagConstraints);
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jPanel7.add(jPanel8, new java.awt.GridBagConstraints());
-
-        jLabel17.setText("jLabel10");
-        jPanel7.add(jLabel17, new java.awt.GridBagConstraints());
-
-        jFrame1.getContentPane().add(jPanel7);
-
         jPanel9.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel18.setFont(new java.awt.Font("Ravie", 3, 48)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 143, 57));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("GREEN");
-        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setForeground(new java.awt.Color(0, 143, 57));
@@ -280,117 +89,275 @@ public class formulario extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox2.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBox2.setForeground(new java.awt.Color(0, 143, 57));
-        jCheckBox2.setText("Acepto los terminos del concurso y doy mi consentimiento para utilizar mis datos y recibir publicidad *");
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(322, 322, 322)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jCheckBox2))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addGap(322, 322, 322)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(0, 10, Short.MAX_VALUE)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(0, 100, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jCheckBox2)
-                .addContainerGap())
+                .addGap(70, 70, 70))
         );
 
         jFrame1.getContentPane().add(jPanel9);
 
+        jFrame2.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jFrame2.setTitle("Formulario");
+        jFrame2.setBackground(new java.awt.Color(0, 143, 57));
+        jFrame2.setResizable(false);
+        jFrame2.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel6.setText("Nombre: *");
+        jFrame2.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 80, 20));
+
+        jLabel7.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel7.setText("Apellidos:");
+        jFrame2.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel8.setText("Emai: *");
+        jFrame2.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel9.setText("Frase:");
+        jFrame2.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 50, 20));
+
+        jLabel10.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel10.setText("Fecha de nacimiento: *");
+        jFrame2.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 170, 40));
+
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setFont(new java.awt.Font("Ravie", 0, 11)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 143, 57));
+        jButton4.setText("Participar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jFrame2.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 140, 30));
+
+        jLabel21.setFont(new java.awt.Font("Ravie", 3, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("GREEN");
+        jLabel21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jFrame2.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 130, -1));
+
+        jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jCheckBox2.setText(" Acepto los terminos  *");
+        jFrame2.getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 140, 20));
+
+        nombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombre1ActionPerformed(evt);
+            }
+        });
+        jFrame2.getContentPane().add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 140, -1));
+        jFrame2.getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 140, -1));
+        jFrame2.getContentPane().add(Email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 140, -1));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jFrame2.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 180, 80));
+        jFrame2.getContentPane().add(fecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 140, -1));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+
+        jFrame2.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 400, 190));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Formulario");
         setBackground(new java.awt.Color(0, 143, 57));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMaximumSize(new java.awt.Dimension(410, 310));
+        setResizable(false);
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dateChooserCombo1.setCalendarPreferredSize(new java.awt.Dimension(340, 260));
+        dateChooserCombo1.setWeekStyle(datechooser.view.WeekDaysStyle.SHORT);
+        dateChooserCombo1.setFieldFont(new java.awt.Font("Tahoma", java.awt.Font.PLAIN, 12));
+        dateChooserCombo1.setNavigateFont(new java.awt.Font("Serif", java.awt.Font.PLAIN, 11));
+        jPanel3.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 450, 30));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel11.setText("Frase que quieres");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 170, 40));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 143, 57));
         jLabel1.setText("Nombre: *");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 80, 20));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 150, 20));
 
-        jLabel2.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 143, 57));
         jLabel2.setText("Apellidos:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
-        jLabel3.setText("Emai: *");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel3.setText("Email: *");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
-        jLabel4.setText("Frase:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 50, 20));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel4.setText("que aparezca:");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 150, 40));
 
-        jLabel5.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
-        jLabel5.setText("Fecha de nacimiento: *");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 170, 40));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel5.setText("nacimiento: *");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 250, 50));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Ravie", 0, 11)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 143, 57));
-        jButton3.setText("Participar");
+        jButton3.setText("CANCELAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 140, 30));
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 140, 30));
+
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jCheckBox1.setText(" Acepto los terminos  *");
+        jPanel3.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 160, 30));
+
+        nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreActionPerformed(evt);
+            }
+        });
+        jPanel3.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 450, 30));
+        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 450, 30));
+        jPanel3.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 450, 30));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setTabSize(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 360, 110));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 143, 57));
+        jLabel12.setText("Fecha de");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 250, 50));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sanmartineducar.png"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel13MousePressed(evt);
+            }
+        });
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel15.setText("Imprimir código QR -->");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 430, -1, 30));
 
         jLabel20.setFont(new java.awt.Font("Ravie", 3, 24)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 143, 57));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("GREEN");
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo-verde-manchas-acuarela_1108-241.jpg"))); // NOI18N
         jLabel20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 130, -1));
+        jLabel20.setPreferredSize(new java.awt.Dimension(200, 200));
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 640, 570));
 
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox1.setText(" Acepto los terminos  *");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 140, 20));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 140, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 140, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 140, -1));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/551.jpg"))); // NOI18N
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        getContentPane().add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 140, -1));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 180, 80));
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1164819-bigthumbnail.jpg"))); // NOI18N
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 310));
+        getContentPane().add(jPanel3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        NewJFrame abrir=new NewJFrame();
+                abrir.setVisible(true);
+                abrir.setSize(800, 500);
+                abrir.setLocationRelativeTo(null);
+                this.setVisible(false);
+                boolean res=true;
         
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    public static boolean validarFecha(String fecha) {
+        try {
+            SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+            formatoFecha.setLenient(false);
+            formatoFecha.parse(fecha);
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
+    }
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        JFrameFinal abrir=new JFrameFinal();
-        abrir.setVisible(true);
-           abrir.setSize(255, 400);
-           abrir.setLocationRelativeTo(null);
-           this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombre1ActionPerformed
+
+    private void jLabel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MousePressed
+        
+        if(nombre.getText()==" " || Email.getText()==" " ||  jCheckBox1.isSelected()==false )
+        {
+            JOptionPane.showMessageDialog(jFrame1, "Debe rellenar los campos marcados con un * y \n marcar la casilla para poder participar ", "Error", JOptionPane.ERROR_MESSAGE);
+        }else
+        {
+          //  res=validarFecha(fecha.getText());
+           // if(res==true)
+            
+                
+                 JFrameFinal abrir=new JFrameFinal();
+                abrir.setVisible(true);
+                abrir.setSize(800, 500);
+                abrir.setLocationRelativeTo(null);
+                this.setVisible(false);
+                                
+                
+            
+            /*else{
+              JOptionPane.showMessageDialog(jFrame1, "Debe introducir una fecha de nacimiento real", "Error en fecha", JOptionPane.ERROR_MESSAGE);
+
+            }*/
+          
+        }
+        
+    }//GEN-LAST:event_jLabel13MousePressed
 
     /**
      * @param args the command line arguments
@@ -428,45 +395,44 @@ public class formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Email;
+    private javax.swing.JTextField Email1;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
+    private javax.swing.JTextField fecha1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private com.toedter.calendar.JCalendar jCalendar2;
+    private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JDialog jDialog1;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField nombre1;
     // End of variables declaration//GEN-END:variables
 }
